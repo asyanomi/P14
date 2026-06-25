@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Realtime Chat</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        #messages {
+            list-style: none; /* hilangkan bullet */
+            padding: 0;       /* hapus jarak kiri */
+            margin: 0;
+        }
+        /* ✅ Khusus HP */
+        @media (max-width: 600px) {
+            h2 {
+                font-size: 20px;
+            }
+            
+
+
+            #messages li {
+                font-size: 18px;
+            }
+            #messageInput {
+                font-size: 18px;
+                padding: 14px;
+            }
+            button {
+                font-size: 18px;
+                padding: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+<input id="nama" autocomplete="off" placeholder="Ketik Nama Anda" />
+
+<h2>Realtime Chat</h2>
+
+<ul id="messages">
+</ul>
+
+<div class="input-area">
+    <input id="messageInput" autocomplete="off" placeholder="Ketik pesan..." />
+    <button onclick="sendMessage()">Send</button>
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
